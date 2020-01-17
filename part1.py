@@ -12,8 +12,6 @@ if len(sys.argv) != 2:
     error('Invalid Number of Arguments')
 else:
     path = sys.argv[1]
-    
-# print("path:", path)
 
 
 # path = "/Users/David/Desktop/"
@@ -26,7 +24,6 @@ for l in open(path+"tip.json").readlines():
 # Part 1
 print(f"Q1:{len(data2)}")
 
-
 # Part 2
 dictionary = {}
 for tip in data2:
@@ -38,9 +35,7 @@ for tip in data2:
         dictionary[length] = 1
 
 max_len = max(dictionary.keys())
-# print(dictionary[max_len])
 print(f"Q2:{dictionary[max_len]}")
-
 
 
 # Part 3
@@ -56,8 +51,6 @@ counts = list(users_dictionary.values())
 avg = np.mean(counts)
 std = np.std(counts)
 
-# print(avg, std)
-
 excellent_cutoff = avg + 6*std
 
 num_excellent_users = 0
@@ -65,7 +58,6 @@ for key in users_dictionary:
     if users_dictionary[key] > excellent_cutoff:
         num_excellent_users += 1
 
-# print("num_excellent_users", num_excellent_users)
 print(f"Q3:{num_excellent_users}")
 
 # Part 4
