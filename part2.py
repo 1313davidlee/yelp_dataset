@@ -14,7 +14,6 @@ def part2():
         path = sys.argv[1]
 
     # load business.json file to pandas dataframe
-    path = "/Users/David/Desktop/"
     d=[]
     for l in open(path+"business.json").readlines():
         d.append(json.loads(l))
@@ -103,6 +102,7 @@ def part2():
     lst = list(df['city'].unique())
     print(lst)
     print(len(lst))
+    return df
 
 
 if __name__ == "__main__": 
